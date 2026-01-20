@@ -352,7 +352,7 @@ class mlp:
         self.optimize()
       self.learning_rate *= lr_decay
       if i % 100 == 0:
-        print(f'epoch {i} - loss: {loss}, pred min: {result.min():.6f}, pred max: {result.max():.6f}')
+        print(f'epoch {i} - loss: {loss}')
 
     print(f'final loss: {loss}')
     return
