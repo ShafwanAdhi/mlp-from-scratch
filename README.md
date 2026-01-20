@@ -162,55 +162,6 @@ def backprop(self):
         # Pass gradient to previous layer
         gradient = weights.T @ gradient
 ```
-
-### Optimizer Algorithms: Intuitive Explanation
-
-Optimizers determine **how** we update weights using the gradients from backpropagation.
-
-#### 1. **SGD (Stochastic Gradient Descent)**
-*The baseline approach.*
-
-- Intuition: Walk downhill in the direction that reduces error
-- Update Rule: `weight = weight - learning_rate × gradient`
-- Analogy: Walking straight downhill on a mountain
-- Limitation: Can oscillate or get stuck in local minima
-
-#### 2. **SGD with Momentum**
-*Adding inertia to gradient descent.*
-
-- Intuition: Remember previous directions and keep some momentum
-- Benefit: Smooths out oscillations, accelerates in consistent directions
-- Analogy: A ball rolling down a hill (builds up speed)
-- Implementation: 
-  ```python
-  velocity = β × velocity + learning_rate × gradient
-  weight = weight - velocity
-  ```
-
-#### 3. **RMSprop**
-*Adaptive learning rates per parameter.*
-
-- Intuition: Give smaller updates to weights that change frequently, larger updates to stable ones
-- Benefit: Different learning rates for different parameters
-- Analogy: Adjusting step size based on terrain roughness
-- Key Mechanism: Tracks exponential average of squared gradients
-
-#### 4. **Adam (Adaptive Moment Estimation)**
-*Best of both worlds: momentum + adaptive learning rates.*
-
-- *ntuition: Combines momentum (direction memory) with adaptive rates (per-parameter scaling)
-- Why It's Popular: Robust across different problems, rarely needs tuning
-- Components:
-  - First moment: Average of gradients (momentum)
-  - Second moment: Average of squared gradients (adaptive rates)
-- Bias Correction: Adjusts for initialization bias in early training
-
-**Performance Comparison in Practice:**
-- **SGD**: Slow but steady, good for simple problems
-- **Momentum**: Faster convergence, better for problems with ravines
-- **RMSprop**: Great for RNNs and non-stationary problems
-- **Adam**: Default choice for most deep learning tasks
-
 ---
 
 ## Quick Start
@@ -500,5 +451,3 @@ Built with the goal of mastering ML fundamentals and showcasing engineering disc
 ## Contact
 
 For questions or collaboration opportunities, reach out via GitHub issues or [adhishafwan@gmail.com](adhishafwan@gmail.com).
-
-**⭐ If this project helped you learn, please consider starring the repository!**
