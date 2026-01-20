@@ -1,13 +1,13 @@
 Install directly from GitHub:
 
 ```bash
-pip install git+https://github.com/YOUR_USERNAME/mlp-from-scratch.git
+pip install git+https://github.com/ShafwanAdhi/mlp-from-scratch.git
 ```
 
 Or clone and install locally:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mlp-from-scratch.git
+git clone https://github.com/ShafwanAdhi/mlp-from-scratch.git
 cd mlp-from-scratch
 pip install -e .
 ```
