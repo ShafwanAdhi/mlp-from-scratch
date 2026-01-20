@@ -12,9 +12,9 @@
 
 - [Project Overview](#-project-overview)
 - [Motivation](#-motivation)
+- [Installation](#-installation)
 - [Core Features](#-core-features)
 - [Technical Deep Dive](#-technical-deep-dive)
-- [Installation](#-installation)
 - [Quick Start](#-quick-start)
 - [Performance With PyTorch Comparison](#-Performance-With-PyTorch-Comparison)
 - [Design Trade-offs](#-design-trade-offs)
@@ -51,6 +51,31 @@ Modern ML frameworks like PyTorch and TensorFlow are powerful but abstract away 
 - Performance Control: Direct NumPy operations can be faster for specific use cases
 - Customization: Full control over every aspect of training and inference
 - Interview Relevance: Many technical interviews assess understanding of fundamentals, not framework APIs
+
+---
+
+## Installation
+
+### From GitHub (Recommended)
+
+```bash
+pip install git+https://github.com/ShafwanAdhi/mlp-from-scratch.git
+```
+
+### Local Development
+
+```bash
+git clone https://github.com/ShafwanAdhi/mlp-from-scratch.git
+cd mlp-from-scratch
+pip install -e .
+```
+
+### Dependencies
+
+- Python >= 3.7
+- NumPy >= 1.19.0
+
+That's it! No CUDA, no TensorFlow, no PyTorch.
 
 ---
 
@@ -185,31 +210,6 @@ Optimizers determine **how** we update weights using the gradients from backprop
 - **Momentum**: Faster convergence, better for problems with ravines
 - **RMSprop**: Great for RNNs and non-stationary problems
 - **Adam**: Default choice for most deep learning tasks
-
----
-
-## Installation
-
-### From GitHub (Recommended)
-
-```bash
-pip install git+https://github.com/ShafwanAdhi/mlp-from-scratch.git
-```
-
-### Local Development
-
-```bash
-git clone https://github.com/ShafwanAdhi/mlp-from-scratch.git
-cd mlp-from-scratch
-pip install -e .
-```
-
-### Dependencies
-
-- Python >= 3.7
-- NumPy >= 1.19.0
-
-That's it! No CUDA, no TensorFlow, no PyTorch.
 
 ---
 
