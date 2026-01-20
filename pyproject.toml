@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlp-scratch"
+version = "0.1.0"
+description = "A lightweight Multi-Layer Perceptron implementation from scratch using NumPy"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Shafwan Adhi", email = "adhishafwan@gmail.com"}
+]
+maintainers = [
+    {name = "Shafwan Adhi", email = "adhishafwan@gmail.com"}
+]
+keywords = ["machine-learning", "neural-network", "mlp", "deep-learning", "numpy", "education"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Education",
+]
+dependencies = [
+    "numpy>=1.19.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+]
+examples = [
+    "matplotlib>=3.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ShafwanAdhi/mlp-from-scratch"
+Documentation = "https://github.com/ShafwanAdhi/mlp-from-scratch#readme"
+Repository = "https://github.com/ShafwanAdhi/mlp-from-scratch"
+Issues = "https://github.com/ShafwanAdhi/mlp-from-scratch/issues"
+
+[tool.setuptools]
+packages = ["mlp_scratch"]
+
+[tool.setuptools.package-data]
+mlp_scratch = ["py.typed"]
+
+[tool.black]
+line-length = 100
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
