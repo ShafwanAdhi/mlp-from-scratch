@@ -262,8 +262,26 @@ model.set_loss('cce')  # Categorical cross-entropy
 model.set_optimizer('adam')
 
 # One-hot encoded labels
-y_train = [[1, 0, 0], [0, 1, 0], [0, 0, 1], ...]
+X_train = [
+    [1.0, 0.2, 0.1, 0.0],   # class 0
+    [0.9, 0.1, 0.2, 0.1],   # class 0
 
+    [0.1, 1.0, 0.8, 0.9],   # class 1
+    [0.2, 0.9, 0.7, 0.8],   # class 1
+
+    [0.0, 0.1, 1.0, 0.9],   # class 2
+    [0.1, 0.2, 0.9, 1.0]    # class 2
+]
+y_train = [
+    [1, 0, 0],  # class 0
+    [1, 0, 0],
+
+    [0, 1, 0],  # class 1
+    [0, 1, 0],
+
+    [0, 0, 1],  # class 2
+    [0, 0, 1]
+]
 model.fit(X_train, y_train, epoch=2000, learning_rate=0.01, lr_decay=0.995)
 ```
 
